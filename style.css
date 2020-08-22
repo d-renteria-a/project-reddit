@@ -1,11 +1,12 @@
-.page-header {
+.page-header, .form-block {
     padding-left: 0; 
 }
 
 .comment {
     margin-top: 0;
 }
-  
+
+
 .btn {
     color: white;
     background-color: rgb(0, 119, 199);
