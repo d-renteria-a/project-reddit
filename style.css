@@ -1,9 +1,18 @@
 .page-header, .form-block {
-    padding-left: 0; 
+    padding-left: 0;
+    font-family: 'Almarai', sans-serif; 
 }
 
-.comment {
+.comment-block {
     margin-top: 0;
+}
+
+.post-by, .comment-name {
+    display: inline-block;
+
+}
+.comment-name {
+    font-weight: bold;
 }
 
 
@@ -11,3 +20,4 @@
     color: white;
     background-color: rgb(0, 119, 199);
 }
+
