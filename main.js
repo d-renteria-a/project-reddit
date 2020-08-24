@@ -1,10 +1,5 @@
-//change header font type to correct one
-//Text needs to wrap inside parent element
-//If theres more time make sure the styles look exactly like they do in the pictures
-//check the comment toggle for double clicking
 
-
-
+//Add comments for readability!!!!!!
 
 $('.post-button').click(function () {
     let $newPost = $('#new-post-text')[0].value;
@@ -16,11 +11,12 @@ $('.post-button').click(function () {
     let nameClass = 'class=' + '"post-name"';
     let removePost = '<span class="remove-post">remove</span>';
     let commentPost = `<span class="comment-toggle">comments</span>`
-    let postCount = 1;
     
-
-    if($newPost == 0) {
+    if ($newPost == 0) {
         alert('Your post is empty!');
+        return false
+    } else if ($newName == 0) {
+        alert('Your post needs a name!');
         return false
     }
 
@@ -28,7 +24,6 @@ $('.post-button').click(function () {
         $('.posts').append(`<div ${styleClasses}>${removePost} ${commentPost}<p ${postClass}>${$newPost}</p><br>
         <div class="comment-block"></div>
         <p ${postedByClass}>Posted By: <h5 ${nameClass}>${$newName}</h5></p></div>`);
-        postCount++
     }
 
     createNewPost();
@@ -48,9 +43,9 @@ $('.post-button').click(function () {
             addCommentFields(selectedComment);
         }
 
-        if(selectedCommentClass === 'comment-block hide') {
-            selectedComment.attr('class', 'comment-block')
-        } else {
+        if(selectedCommentClass === 'comment-block'|| selectedCommentClass === 'comment-block hide') {
+            selectedComment.attr('class', 'comment-block show')
+        } else if (selectedCommentClass === 'comment-block show') {
             selectedCommentClass += ' hide';
             selectedComment.attr('class', selectedCommentClass)
         }

@@ -1,6 +1,13 @@
+label {
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Alata', sans-serif;
+}
+
 .page-header, .form-block {
     padding-left: 0;
-    font-family: 'Almarai', sans-serif; 
 }
 
 .post-block {
@@ -57,5 +64,9 @@
 }
 
 .hide {
-    display: hidden;
+    display: none;
+}
+
+.show {
+    display: inline-block;
 }
