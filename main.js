@@ -38,10 +38,9 @@ $('.post-button').click(function () {
         $(this).parent().remove();
     })
 
-      
+     
     $('.comment-toggle').click(function () {
         let selectedComment = $(this).parent().find('.comment-block')
-        let selectedCommentClass = selectedComment.attr('class')
         
         //Create comment input fields under a post if it does not have any
         if(selectedComment.children().length < 1) {
@@ -49,14 +48,9 @@ $('.post-button').click(function () {
         }
 
         //Enable user to toggle comments
-        if(selectedCommentClass === 'comment-block') {
-            selectedComment.attr('class', 'comment-block show')
-        } else if (selectedCommentClass === 'comment-block show') {
-            selectedCommentClass += ' hide';
-            selectedComment.attr('class', selectedCommentClass)
-        }
+        selectedComment.toggleClass("hide")
     })
-})
+}) 
 
 
 const addCommentFields = function(comment) {
